@@ -5,7 +5,7 @@ date: "2022-10-07"
 output:
   xaringan::moon_reader:
     css: ["default", "config/sydney.css", "config/sydney-fonts.css"]
-    self_contained: TRUE
+    self_contained: FALSE
     # includes:
     #   in_header: "config/mathjax-equation-numbers.html"
     nature:
@@ -39,16 +39,12 @@ xaringanExtra::use_xaringan_extra("tachyons")
 ```{r, echo=FALSE, out.width='30%'}
 knitr::include_graphics("img/qrcode.png")
 ```
-
-## Outline
+---
+# Outline
 
 .pull-left[
-- Who
-- What is a data science project?
-- What is the output of the project?
-  - Insights
-  - Objective decisions
-  - Other products
+- Types of data science output (Peng)
+- Data science workflows
 ]
 .pull-right[
 - What tools do we have?
@@ -56,8 +52,180 @@ knitr::include_graphics("img/qrcode.png")
   - Reproducibility is the key
 ]
 
-## Who
+---
+# Who
 
 Ok, let's do this
 
 Some else
+
+---
+class: center, middle, inverse
+# Let's start with a failure
+
+---
+# The Duke trial saga
+
+.pull-left[
+
+Anil Potti *et al*: A Genomic Strategy to Refine Prognosis in
+Early-Stage Non–Small-Cell Lung Cancer. *The New England Journal of
+Medicine*. 2006.
+
+- Prediction of lung cancer evolution
+
+Anil Potti *et al*: Genomic signatures to guide the use of
+chemotherapeutics. *Nature Medicine*. 2006.
+
+- "Best" chemotherapy to cancer patients
+]
+.pull-right[
+- Duke researchers started **three clinical trials**
+- Researchers from **MD Anderson Cancer Centre** tried to apply the new
+  technique, with no success
+- They found several problems in Duke's group data
+- After investigation, the clinical trials had to be closed
+- It turned out that one of the authors was involved with the biomedic
+industry
+]
+
+.footnotesize[
+- [An array of errors](https://www.economist.com/node/21528593). The
+  Economist, 2011.
+- [How Bright Promise in Cancer Testing Fell
+  Apart](https://www.nytimes.com/2011/07/08/health/research/08genes.html).
+  The New York Times, 2011.
+]
+
+---
+class: center, middle, inverse
+# How to avoid this type of failure
+
+---
+# Avoiding failures
+
+.pull-left[
+- Know what you're doing
+- Know the **question** being asked
+- Know the **type of question** being asked
+- Know how to **approach** the question
+- Know the **methods** to answer the question
+- Know the **tools** to develop the methods
+- Know how to **communicate** the results
+- Know how to make the results **reproducible**
+- Know how to **share** te results
+]
+.pull-right[
+- **Adopt a workflow**
+  - There are lots of them
+  - Stick with one and go for it
+  - There's no "best" workflow
+
+- **Use appropriate methods**
+  - *Data science as art*
+
+- **Use the appropriate tools**
+  - Automate everything
+  - Version control your files
+  - Use software that improves reproducibility
+]
+
+---
+class: center, middle, inverse
+# Types of questions
+
+---
+# Types of questions
+
+Mistaking the type of question being considered is the most common error
+in data analysis (Leek, Peng)
+
+Any specific data analysis can be broadly classified into one of six
+types
+
+1. Descriptive
+2. Exploratory
+3. Inferential
+4. Predictive
+5. Causal
+6. Mechanistic
+
+---
+# Types of questions (Leek, Peng)
+
+```{r, out.width='55%'}
+knitr::include_graphics("img/questions.jpeg")
+```
+
+---
+class: center, middle, inverse
+# Data Science workflows
+
+---
+# Data Science workflows
+
+.pull-left[
+- Data analysis is not a linear, one-step-after-the-other process which
+at the end, arrives at a nicely packaged and coherent result
+
+- Data analysis is a highly iterative and non-linear process
+
+- Information is learned at each step, which then informs
+whether (and how) to refine, and redo, the step that was
+just performed, or whether (and how) to proceed to the next
+step
+
+]
+.pull-right[
+There are 5 core activities of data analysis:
+
+1. Stating and refining the question
+2. Exploring the data
+3. Building formal statistical models
+4. Interpreting the results
+5. Communicating the results
+]
+
+---
+# Epicycle workflow
+
+.pull-left[
+
+for each of the five core activities, it is critical
+that you engage in the following steps:
+1. Setting Expectations,
+2. Collecting information (data), comparing the data to
+your expectations, and if the expectations don’t match,
+3. Revising your expectations or fixing the data so your
+data and your expectations match.
+
+Iterating through this 3-step process is what we call the
+“epicycle of data analysis.” As you go through every stage
+of an analysis, you will need to go through the epicycle to
+continuously refine your question, your exploratory data
+analysis, your formal models, your interpretation, and your
+communication.
+
+]
+.pull-right[
+```{r, out.width='70%'}
+knitr::include_graphics("img/epicycles.png")
+```
+]
+
+---
+# Harvard workflow
+
+.pull-left[
+
+]
+
+.pull-right[
+```{r, out.width='90%'}
+knitr::include_graphics("img/harvard.png")
+```
+]
+
+
+---
+# Box, Hunter & Hunter workflow
