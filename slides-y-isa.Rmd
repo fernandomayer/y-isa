@@ -1,0 +1,63 @@
+---
+title: "Case Studies in Data Science Workflow"
+author: "Fernando Mayer (Maynooth University)"
+date: "2022-10-07"
+output:
+  xaringan::moon_reader:
+    css: ["default", "config/sydney.css", "config/sydney-fonts.css"]
+    self_contained: TRUE
+    # includes:
+    #   in_header: "config/mathjax-equation-numbers.html"
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: TRUE
+      countIncrementalSlides: FALSE
+---
+
+```{r, cache=FALSE, include=FALSE}
+source("config/setup_knitr.R")
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = FALSE,
+           dashed = FALSE)
+bib <- ReadBib("config/refs.bib", check = FALSE)
+xaringanExtra::use_xaringan_extra("tachyons")
+```
+
+# Slides
+
+.msmall[
+- HTML: http://leg.ufpr.br/~fernandomayer/pesqrep
+- PDF: http://leg.ufpr.br/~fernandomayer/pesqrep/pesqrep.pdf
+- Código-fonte: https://github.com/fernandomayer/pesqrep-slides
+]
+
+```{r, echo=FALSE, out.width='30%'}
+knitr::include_graphics("img/qrcode.png")
+```
+
+## Outline
+
+.pull-left[
+- Who
+- What is a data science project?
+- What is the output of the project?
+  - Insights
+  - Objective decisions
+  - Other products
+]
+.pull-right[
+- What tools do we have?
+  - Automation
+  - Reproducibility is the key
+]
+
+## Who
+
+Ok, let's do this
+
+Some else
