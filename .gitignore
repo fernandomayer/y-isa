@@ -1,3 +1,7 @@
+*_files/
+*.html
+*.ipynb
+
 # History files
 .Rhistory
 .Rapp.history
