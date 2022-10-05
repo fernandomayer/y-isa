@@ -1,4 +1,5 @@
 Type: project
 Description: Y-ISA.
 Depends:
-    rmarkdown
+    rmarkdown,
+    servr
