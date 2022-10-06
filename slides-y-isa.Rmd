@@ -255,12 +255,15 @@ to a computer.
 
 .pull-left[
 
-O processo de análise de dados por um pesquisador pode ser comparado ao
-processo de **criação de uma música por um músico**.
+- An analyst's data analysis can be compared to a songwriter's
+  composition
 
-Os métodos já foram ensinados ao computador, cabe ao analista **saber
-como juntar as ferramentas** e aplicá-las para responder questões
-relevantes para a ciência e para as pessoas.
+- The methods were already thaught to the computer
+
+- We have the tools and the theory, but is up to each analyst to decide
+  how to put things together
+
+- That's the "spark of creativity", and that may not be easy to describe
 ]
 
 .pull-right[
@@ -278,16 +281,32 @@ class: center, middle, inverse
 ---
 # Tools for a colaborative workflow
 
-- The key tools are the ones that makes all the steps **reproducible**
-  by **anyone** in your team
 
-1. Make it reproducible for you first!
+The key tools are the ones that makes all the steps **reproducible** by
+  **anyone** in your team
+
+<br>
+
+.pull-left-40[
+1. Make it reproducible to you first!
+
 2. Make it reproducible to your team
+
 3. Make it reproducible to anyone else
+]
+.pull-right-60[
+> Um projeto científico é **computacionalmente reproduzível** se um
+segundo pesquisador (**incluindo você no futuro**) é capaz de recriar os
+resultados finais do projeto, incluindo as descobertas quantitativas,
+tabelas e figuras, **dado apenas um conjunto de arquivos e instruções
+escritas**.
+
+> Justin Kitzes
+]
+
 
 ---
-# Replicability vs reproducibility in science
-
+# Replicability vs reproducibility
 
 .pull-left[
 ## Replication
@@ -307,10 +326,335 @@ knitr::include_graphics("img/reproduction.png")
 ---
 # Reproducibility spectrum
 
+- But, replicability is hard! (Sometimes even impossible!)
+
+- So, we have two options
+
+  1. Do nothing
+  2. Reproduce the study
+
+- The general idea is to create a **minimum standard** for judging
+scientific claims ([Peng, 2011,
+*Science*](http://science.sciencemag.org/content/334/6060/1226.full))
+
+
+```{r, out.width='70%', echo=FALSE}
+knitr::include_graphics("img/F1.large.jpg")
+```
+
+---
+# Replicação e reprodução na Ciência
+
+Se reproduzir uma análise leva à um resultado já conhecido e esperado,
+então **qual o propósito de uma pesquisa reproduzível**?
+
+.pull-left-60[
+**Para a Ciência:**
+
+- Padrão para **julgar** descobertas científicas
+- **Validação** da análise de dados
+- Diferentes cientistas, com diferentes visões e ideias podem colaborar
+  no sentido de continuar a pesquisa, ou sugerir outras abordagens
+  (**análise de dados como arte**)
+- Reprodutibilidade aprimora a replicabilidade
+- Evita esforço duplicado e encoraja o desenvolvimento cumulativo de
+  conhecimento
+]
+.pull-right-40[
+**Para você:**
+
+- **Maior impacto da pesquisa**
+- Melhores hábitos de trabalho
+- Melhor trabalho em equipe
+- Mudanças futuras são mais fáceis
+]
+
+
 
 ---
 # Elements of reproducibility
 
+.pull-left[
+1\. **Data**
+  - Must be provided the exact same way it was used in the analysis
+  - If raw data was processed, both the raw data and the script that
+  processed it must be provided
+
+2\. **Code**
+  - This automatically excludes point-and-click software
+  - It must be executable all at once
+  - If there are sets of files, then you need something to assure that
+    they will be executed in the correct order
+  - Make sure that all needed packages/software are installed (possibly
+    in specific versions)
+]
+.pull-right[
+3\. **Documentation**
+  - Describe to humans what the code is doing (don't make people guess)
+  - Describe the results
+
+4\. **Distribution**
+  - This could be to you, to your team, to your boss, or to the World
+  - Share in a way that anyone can download and reproduce it
+]
+
 
 ---
 # Tools for reproducibility
+
+## Publicar dados e códigos não é necessariamente uma tarefa trivial
+
+.pull-left[
+### Problemas comuns
+
+- Muitos autores simplesmente "colocam" arquivos na *web*.
+- Existem jornais que disponibilizam materiais suplementares, mas que
+  sabidamente são desorganizados ou falhos.
+- Mesmo quando dados e códigos estão disponíveis, o leitor ainda tem que
+  baixar dados e códigos, e então tentar juntar tudo, uma tarefa que
+  geralmente não é fácil e desencoraja a maioria das pessoas.
+- O leitor pode não ter os mesmos recursos computacionais que o
+  autor.
+
+]
+.pull-right[
+Algumas dicas para ajudar a tornar um projeto reproduzível:
+
+1. Documente tudo!
+2. Tudo é um arquivo (de texto)
+3. Todos os arquivos devem poder ser lidos por humanos
+4. Organize e "amarre" seus arquivos de forma apropriada
+5. Tenha um plano para organizar, armazenar, e tornar seus arquivos
+   disponíveis
+
+]
+
+---
+# Ferramentas da reprodutibilidade
+
+.pull-left-60[
+<br>
+<br>
+```{r, echo=FALSE, out.width='90%'}
+knitr::include_graphics("img/nature_toolkit.png")
+```
+]
+
+.pull-right-40[
+[Nature, 2018](https://www.nature.com/articles/d41586-018-05990-5)
+
+- Use code
+- Go open-source
+- Track your versions
+- Document your analyses
+- Automate
+- Replicate your environment
+- Archive your data
+- Get help. [Software Carpentry](https://software-carpentry.org/).
+]
+
+---
+# Track your versions: What it isn't
+
+.pull-left[
+### Cloud Storage
+
+- Dropbox
+- Google Drive
+- MS One
+- And many others
+
+]
+.pull-right[
+```{r, out.width='80%'}
+knitr::include_graphics("img/final.png")
+```
+]
+
+---
+# Track your versions: What it is
+
+.pull-left[
+### Version Control Systems (VCS)
+
+- Git
+- Subversion (SVN)
+- Mercurial
+- And many others
+
+Use hosting servers to share and colaborate
+
+- GitHub
+- Gitlab
+- Bitbucket
+- And many others
+
+]
+.pull-right[
+```{r, out.width='80%'}
+knitr::include_graphics("img/git-flow.png")
+```
+]
+
+---
+# Document your analyses: use dynamic documents
+
+.pull-left-60[
+- This concept dates back to 1984, when Donald Knuth (again) defined
+  (and actually invented) what **literate programming** is
+- It is a combination of a **markup language** (LaTeX, Markdown, HTML,
+  etc) and one (or several) **programming languages**
+  - Yes, you can mix R, Python, Bash, C, etc in the same document!
+- When the document is compiled, the code is executed and you get an
+  output (PDF, HTML, etc) with tables, figures, ...
+]
+.pull-right-40[
+<br>
+> *Instead of imagining that our main task is to instruct a computer what
+> to do, let us concentrate rather on explaining to humans what we want
+> the computer to do.*
+>
+> Donald Knuth, 1984
+]
+
+---
+# Document your analyses: use dynamic documents
+
+.pull-left-40[
+- **Sweave**
+  - It's in R since the beggining of times
+  - Allows only LaTeX as markup language
+  - Only R as programming language
+- **knitr**
+  - Allows other markup languages (Markdown, HTML)
+  - Allows many (14+) programming languages
+
+]
+.pull-right-60[
+- **rmarkdown**
+  - The "workhorse" is still knitr
+  - Powered by [Pandoc](https://pandoc.org/), a universal document
+    converter
+  - It is Pandoc that actually produces the final outputs in different
+    formats
+  <!-- - There are many variations of rmarkdown: bookdown, blogdown, -->
+  <!--   thesisdown, etc -->
+- **Quarto**
+  - Is a stand-alone software for scientific publishing
+  - Built on Pandoc, with many ideas borrowed from rmarkdown
+  - Makes dynamic documents widely available, as it does not rely only
+    in R and R packages
+]
+
+---
+# Automate: two types of automation
+
+.pull-left[
+### Code level
+- Create scripts for pre-processing data
+- Create functions to execute repetitive tasks
+  - Bash (Shell Linux/Unix) is your friend here
+- Create a routine to run scripts in a specific order
+  - Create a [MAKEFILE](https://opensource.com/article/18/8/what-how-makefile)
+]
+
+.pull-right[
+### Deploy level
+- Use Continuous Integration (CI) or Continuous Delivery (CD) platforms
+to automate, test and deploy your project
+- Your routines will run in an external, pristine environment to avoid
+the famous
+   - "*but it works on my computer*..."
+- Some examples:
+  - Github Actions
+  - Gitlab CI
+  - Travis CI
+]
+
+---
+# Replicate your environment
+
+.pull-left[
+**Virtual environments**
+
+- Makes a project self-contained (or almost) in terms of packages
+- Easy to use and record all packages used and **in their specific versions**
+- Recorded packages are downloaded and installed in the fisrt use
+  - In R: `renv`
+  - In Python: `venv`
+]
+
+.pull-right[
+**Container virtualization**
+
+- Virtualization of an environment at the **operating system** level
+- Containers are isolated from each other and can have their own
+  softwares in any specific version
+- [Docker](https://www.docker.com/) is the main tool
+]
+
+**In the reproducibility spectrum:**
+.center.content-box-purple[
+Script < Script+Data < renv < Docker < renv+Docker
+]
+
+---
+# Replicate your environment: renv
+
+.pull-left[
+### The problem
+<br>
+```{r, out.width='80%'}
+knitr::include_graphics("img/shared-library.png")
+```
+]
+.pull-right[
+### The solution
+<br>
+```{r, out.width='80%'}
+knitr::include_graphics("img/package-cache.png")
+```
+]
+
+---
+# Replicate your environment: containers
+
+<br>
+
+```{r, out.width='80%'}
+knitr::include_graphics("img/containers.jpg")
+```
+
+---
+
+```{r, out.width='40%'}
+knitr::include_graphics("img/meme.jpg")
+```
+
+---
+# Archive your data
+
+Use **data repositories** to share data (and get the proper credits)
+
+- [figshare](https://figshare.com/)
+  - Allows you to publish figures, tables, videos, data, etc.
+  - Everything gets a **DOI** (Digital Object Identifier), so it can be
+  cited
+- [zenodo](https://zenodo.org/)
+  - Publish text and data
+  - Also has DOI and link researchers with [Orcid](https://orcid.org/).
+- [Nature recommended data
+  repositories](https://www.nature.com/sdata/policies/repositories)
+  - Compilation of several repositories
+- [re3data](https://www.re3data.org/)
+  - *REgistry of REsearch Data REpositories* is a tool to search for
+    open access databases
+
+
+---
+class: center, middle, inverse
+# Thanks!
+
+```{r, include=FALSE, eval=FALSE}
+xaringanBuilder::build_pdf("slides-y-isa.Rmd")
+```
