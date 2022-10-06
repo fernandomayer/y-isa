@@ -137,11 +137,13 @@ class: center, middle, inverse
 ---
 # Types of questions
 
-Mistaking the type of question being considered is the most common error
+> Mistaking the type of question being considered is the most common error
 in data analysis (Leek, Peng)
 
+<br>
+
 Any specific data analysis can be broadly classified into one of six
-types
+types:
 
 1. Descriptive
 2. Exploratory
@@ -165,15 +167,14 @@ class: center, middle, inverse
 # Data Science workflows
 
 .pull-left[
-- Data analysis is not a linear, one-step-after-the-other process which
-at the end, arrives at a nicely packaged and coherent result
+- Data analysis **is not** a linear, one-step-after-the-other process
 
-- Data analysis is a highly iterative and non-linear process
+- Data analysis **is** a highly iterative and non-linear process
 
-- Information is learned at each step, which then informs
-whether (and how) to refine, and redo, the step that was
-just performed, or whether (and how) to proceed to the next
-step
+- Information is learned at each step
+  - Informs whether (and how) to refine, the step that was just
+performed
+  - Informs whether (and how) to proceed to the next step
 
 ]
 .pull-right[
@@ -184,27 +185,30 @@ There are 5 core activities of data analysis:
 3. Building formal statistical models
 4. Interpreting the results
 5. Communicating the results
+
+--
+
+- *Sharing the results*
 ]
 
 ---
-# Epicycle workflow
+# Epicycle workflow (Peng, Matsui)
 
 .pull-left[
 
-for each of the five core activities, it is critical
-that you engage in the following steps:
-1. Setting Expectations,
-2. Collecting information (data), comparing the data to
-your expectations, and if the expectations don’t match,
-3. Revising your expectations or fixing the data so your
-data and your expectations match.
+For each of the 5 core activities, the following steps are critical
 
-Iterating through this 3-step process is what we call the
-“epicycle of data analysis.” As you go through every stage
-of an analysis, you will need to go through the epicycle to
-continuously refine your question, your exploratory data
-analysis, your formal models, your interpretation, and your
-communication.
+1. Set expectations
+2. Collect data, and compare with expectations
+3. Revise expectations or fix the data
+
+Iterating through this 3-step process is called the **epicycle of data
+analysis**
+
+<!-- As you go through every stage of an analysis, you will need to go -->
+<!-- through the epicycle to continuously refine your question, your -->
+<!-- exploratory data analysis, your formal models, your interpretation, and -->
+<!-- your communication. -->
 
 ]
 .pull-right[
@@ -214,10 +218,12 @@ knitr::include_graphics("img/epicycles.png")
 ]
 
 ---
-# Harvard workflow
+# Harvard workflow (Pfister, Blitzstein, Kaynig)
 
 .pull-left[
+- Basically the same thing (but in "clouds")
 
+- All the others are just variants of these
 ]
 
 .pull-right[
@@ -228,4 +234,83 @@ knitr::include_graphics("img/harvard.png")
 
 
 ---
-# Box, Hunter & Hunter workflow
+# Box, Hunter & Hunter feedback loop ("workflow")
+
+```{r, out.width='60%'}
+knitr::include_graphics("img/feedback-loop.png")
+```
+
+---
+class: center, middle, inverse
+# Data analysis as art
+
+---
+# Data analysis as art
+
+> Science is knowledge which we understand so well that we can teach it
+to a computer.
+> Everything else is art.
+
+> Donald Knuth, 1974
+
+.pull-left[
+
+O processo de análise de dados por um pesquisador pode ser comparado ao
+processo de **criação de uma música por um músico**.
+
+Os métodos já foram ensinados ao computador, cabe ao analista **saber
+como juntar as ferramentas** e aplicá-las para responder questões
+relevantes para a ciência e para as pessoas.
+]
+
+.pull-right[
+```{r, out.width='60%'}
+knitr::include_graphics("img/knuth.jpg")
+```
+]
+
+
+---
+class: center, middle, inverse
+# Tools for a colaborative workflow
+
+
+---
+# Tools for a colaborative workflow
+
+- The key tools are the ones that makes all the steps **reproducible**
+  by **anyone** in your team
+
+1. Make it reproducible for you first!
+2. Make it reproducible to your team
+3. Make it reproducible to anyone else
+
+---
+# Replicability vs reproducibility in science
+
+
+.pull-left[
+## Replication
+```{r, out.width='80%'}
+knitr::include_graphics("img/replication.png")
+```
+]
+
+.pull-right[
+## Reproduction
+```{r, out.width='80%'}
+knitr::include_graphics("img/reproduction.png")
+```
+]
+
+
+---
+# Reproducibility spectrum
+
+
+---
+# Elements of reproducibility
+
+
+---
+# Tools for reproducibility
