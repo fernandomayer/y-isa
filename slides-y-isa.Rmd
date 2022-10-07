@@ -653,8 +653,33 @@ Use **data repositories** to share data (and get the proper credits)
 
 ---
 class: center, middle, inverse
-# Thanks!
+# Don't panic!
 
-```{r, include=FALSE, eval=FALSE}
-xaringanBuilder::build_pdf("slides-y-isa.Rmd")
+---
+# Start by reproducing this slides
+
+https://github.com/fernandomayer/y-isa
+
+<br>
+
+```{r, out.width='40%'}
+knitr::include_graphics("img/qr-code.png")
 ```
+
+---
+# Summary
+
+- Track your versions
+  - Git and Github
+- Document your analyses
+  - Dynamic documents
+- Automate
+  - Functions, scripts and MAKEFILE
+- Replicate your environment
+  - renv and/or Docker
+- Archive your data
+  - Zenodo/Figshare
+
+---
+class: center, middle, inverse
+# Thanks!
