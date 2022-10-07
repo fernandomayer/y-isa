@@ -7,13 +7,13 @@ Presentation for the 3rd Young-ISA Meeting - Limerick, IE
 1. Install `renv`
 
 ```r
-install.packages("renv")
+> install.packages("renv")
 ```
 
-2. Clone this repository with git
+2. Clone this repository with git (this is in a Linux/Unix terminal)
 
 ```bash
-git clone https://github.com/fernandomayer/y-isa.git
+$ git clone https://github.com/fernandomayer/y-isa.git
 ```
 
 Or download a zip file from
@@ -22,7 +22,7 @@ Or download a zip file from
 3. Open R in this project and run
 
 ```r
-renv::restore()
+> renv::restore()
 ```
 
 to install all the packages needed.
@@ -30,7 +30,7 @@ to install all the packages needed.
 4. Run
 
 ```r
-rmarkdown::render("slides-y-isa.Rmd")
+> rmarkdown::render("slides-y-isa.Rmd")
 ```
 
 and see the slides in `slides-y-isa.html` in your browser.
