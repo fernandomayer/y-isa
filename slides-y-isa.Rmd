@@ -39,7 +39,7 @@ What I expect you to know by the end of this talk
 - Know what are the tools available for the data scientist
 ]
 .pull-right[
-What you'll definetly not know by the end
+What you'll definitely not know by the end
 
 - How to use any of this tools
   - Sorry, we would need a few days for that
@@ -100,7 +100,7 @@ class: center, middle, inverse
 - Know the **tools** to develop the methods
 - Know how to **communicate** the results
 - Know how to make the results **reproducible**
-- Know how to **share** te results
+- Know how to **share** the results
 ]
 .pull-right[
 - **Adopt a workflow**
@@ -245,7 +245,7 @@ to a computer*.
 - An analyst's data analysis can be compared to a songwriter's
   composition
 
-- The methods were already thaught to the computer
+- The methods were already taught to the computer
 
 - We have the tools and the theory, but is up to each analyst to decide
   how to put things together
@@ -262,11 +262,11 @@ knitr::include_graphics("img/knuth.jpg")
 
 ---
 class: center, middle, inverse
-# Tools for a colaborative workflow
+# Tools for a collaborative workflow
 
 
 ---
-# Tools for a colaborative workflow
+# Tools for a collaborative workflow
 
 
 The key tools are the ones that makes all the steps **reproducible** by
@@ -282,7 +282,7 @@ The key tools are the ones that makes all the steps **reproducible** by
 3. Make it reproducible to anyone else
 ]
 .pull-right-60[
-> *A scientific project is *computationaly reproducible* if another
+> *A scientific project is *computationally reproducible* if another
 researcher (**including the future you**) is able to recreate all the
 results, given only a set of files and instructions.*
 
@@ -465,7 +465,7 @@ knitr::include_graphics("img/final.png")
 - Mercurial
 - And many others
 
-Use hosting servers to share and colaborate
+Use hosting servers to share and collaborate
 
 - GitHub
 - Gitlab
@@ -505,7 +505,7 @@ knitr::include_graphics("img/git-flow.png")
 
 .pull-left-40[
 - **Sweave**
-  - It's in R since the beggining of times
+  - It's in R since the beginning of times
   - Allows only LaTeX as markup language
   - Only R as programming language
 - **knitr**
@@ -562,17 +562,17 @@ the famous
 
 - Makes a project self-contained (or almost) in terms of packages
 - Easy to use and record all packages used and **in their specific versions**
-- Recorded packages are downloaded and installed in the fisrt use
+- Recorded packages are downloaded and installed in the first use
   - In R: `renv`
   - In Python: `venv`
 ]
 
 .pull-right[
-**Container virtualization**
+**Container virtualisation**
 
-- Virtualization of an environment at the **operating system** level
+- Virtualisation of an environment at the **operating system** level
 - Containers are isolated from each other and can have their own
-  softwares in any specific version
+  software in any specific version
 - [Docker](https://www.docker.com/) is the main tool
 ]
 
