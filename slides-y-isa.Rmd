@@ -1,5 +1,5 @@
 ---
-title: "Case Studies in Data Science Workflow"
+title: "~~Case Studies in~~ Data Science Workflow"
 author: "Fernando Mayer (Maynooth University)"
 date: "2022-10-07"
 output:
@@ -28,36 +28,23 @@ bib <- ReadBib("config/refs.bib", check = FALSE)
 xaringanExtra::use_xaringan_extra("tachyons")
 ```
 
-# Slides
-
-.msmall[
-- HTML: http://leg.ufpr.br/~fernandomayer/pesqrep
-- PDF: http://leg.ufpr.br/~fernandomayer/pesqrep/pesqrep.pdf
-- Código-fonte: https://github.com/fernandomayer/pesqrep-slides
-]
-
-```{r, echo=FALSE, out.width='30%'}
-knitr::include_graphics("img/qrcode.png")
-```
----
 # Outline
 
+<br>
+
 .pull-left[
-- Types of data science output (Peng)
-- Data science workflows
+What I expect you to know by the end of this talk
+
+- What is the general data science workflow
+- Know what are the tools available for the data scientist
 ]
 .pull-right[
-- What tools do we have?
-  - Automation
-  - Reproducibility is the key
+What you'll definetly not know by the end
+
+- How to use any of this tools
+  - Sorry, we would need a few days for that
 ]
 
----
-# Who
-
-Ok, let's do this
-
-Some else
 
 ---
 class: center, middle, inverse
@@ -138,7 +125,7 @@ class: center, middle, inverse
 # Types of questions
 
 > Mistaking the type of question being considered is the most common error
-in data analysis (Leek, Peng)
+in data analysis (Leek & Peng, 2015)
 
 <br>
 
@@ -153,7 +140,7 @@ types:
 6. Mechanistic
 
 ---
-# Types of questions (Leek, Peng)
+# Types of questions (Leek & Peng, 2015)
 
 ```{r, out.width='55%'}
 knitr::include_graphics("img/questions.jpeg")
@@ -185,14 +172,10 @@ There are 5 core activities of data analysis:
 3. Building formal statistical models
 4. Interpreting the results
 5. Communicating the results
-
---
-
-- *Sharing the results*
 ]
 
 ---
-# Epicycle workflow (Peng, Matsui)
+# Epicycle workflow (Peng & Matsui, 2018)
 
 .pull-left[
 
@@ -221,7 +204,9 @@ knitr::include_graphics("img/epicycles.png")
 # Harvard workflow (Pfister, Blitzstein, Kaynig)
 
 .pull-left[
-- Basically the same thing (but in "clouds")
+<br>
+<br>
+- Basically the same thing (but in "clouds" instead of "wheels")
 
 - All the others are just variants of these
 ]
@@ -234,7 +219,9 @@ knitr::include_graphics("img/harvard.png")
 
 
 ---
-# Box, Hunter & Hunter feedback loop ("workflow")
+# Box, Hunter & Hunter (2005) feedback loop ("workflow")
+
+<br>
 
 ```{r, out.width='60%'}
 knitr::include_graphics("img/feedback-loop.png")
@@ -247,9 +234,9 @@ class: center, middle, inverse
 ---
 # Data analysis as art
 
-> Science is knowledge which we understand so well that we can teach it
-to a computer.
-> Everything else is art.
+> *Science is knowledge which we understand so well that we can teach it
+to a computer*.
+> *Everything else is art.*
 
 > Donald Knuth, 1974
 
@@ -295,13 +282,11 @@ The key tools are the ones that makes all the steps **reproducible** by
 3. Make it reproducible to anyone else
 ]
 .pull-right-60[
-> Um projeto científico é **computacionalmente reproduzível** se um
-segundo pesquisador (**incluindo você no futuro**) é capaz de recriar os
-resultados finais do projeto, incluindo as descobertas quantitativas,
-tabelas e figuras, **dado apenas um conjunto de arquivos e instruções
-escritas**.
+> *A scientific project is *computationaly reproducible* if another
+researcher (**including the future you**) is able to recreate all the
+results, given only a set of files and instructions.*
 
-> Justin Kitzes
+> Justin Kitzes (2018)
 ]
 
 
@@ -326,7 +311,7 @@ knitr::include_graphics("img/reproduction.png")
 ---
 # Reproducibility spectrum
 
-- But, replicability is hard! (Sometimes even impossible!)
+- But, replicability is **hard**! (Sometimes even **impossible**!)
 
 - So, we have two options
 
@@ -343,38 +328,31 @@ knitr::include_graphics("img/F1.large.jpg")
 ```
 
 ---
-# Replicação e reprodução na Ciência
+# Reproducibility in science
 
-Se reproduzir uma análise leva à um resultado já conhecido e esperado,
-então **qual o propósito de uma pesquisa reproduzível**?
+<br>
 
-.pull-left-60[
-**Para a Ciência:**
+If we already know the result, then why?
 
-- Padrão para **julgar** descobertas científicas
-- **Validação** da análise de dados
-- Diferentes cientistas, com diferentes visões e ideias podem colaborar
-  no sentido de continuar a pesquisa, ou sugerir outras abordagens
-  (**análise de dados como arte**)
-- Reprodutibilidade aprimora a replicabilidade
-- Evita esforço duplicado e encoraja o desenvolvimento cumulativo de
-  conhecimento
-]
-.pull-right-40[
-**Para você:**
+- Pattern for judging scientific claims
 
-- **Maior impacto da pesquisa**
-- Melhores hábitos de trabalho
-- Melhor trabalho em equipe
-- Mudanças futuras são mais fáceis
-]
+- Validate a data analysis
+
+- Different views of the methods (thar art part)
+
+- Avoid duplicated effort
+
+- Improves team work
 
 
+---
+class: center, middle, inverse
+# Elements of reproducibility
 
 ---
 # Elements of reproducibility
 
-.pull-left[
+.pull-left-60[
 1\. **Data**
   - Must be provided the exact same way it was used in the analysis
   - If raw data was processed, both the raw data and the script that
@@ -388,7 +366,7 @@ então **qual o propósito de uma pesquisa reproduzível**?
   - Make sure that all needed packages/software are installed (possibly
     in specific versions)
 ]
-.pull-right[
+.pull-right-40[
 3\. **Documentation**
   - Describe to humans what the code is doing (don't make people guess)
   - Describe the results
@@ -400,6 +378,7 @@ então **qual o propósito de uma pesquisa reproduzível**?
 
 
 ---
+exclude: true
 # Tools for reproducibility
 
 ## Publicar dados e códigos não é necessariamente uma tarefa trivial
@@ -430,7 +409,11 @@ Algumas dicas para ajudar a tornar um projeto reproduzível:
 ]
 
 ---
-# Ferramentas da reprodutibilidade
+class: center, middle, inverse
+# Tools for reproducibility
+
+---
+# Tools for reproducibility
 
 .pull-left-60[
 <br>
